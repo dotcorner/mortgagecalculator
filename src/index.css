@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  body { font-family: 'Inter', system-ui, sans-serif; }
+  input[type="range"] { @apply w-full accent-indigo-600; }
+}
+.app-bg {
+  background-color: #eef2ff;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 80%, rgba(139, 92, 246, 0.10) 0%, transparent 50%),
+    radial-gradient(#c7d2fe 1px, transparent 1px);
+  background-size: auto, auto, 22px 22px;
+}
+
+@layer components {
+  .card       { @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6; }
+  .input-field { @apply w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-400 transition-all; }
+  .stat-value { @apply text-3xl font-bold tracking-tight text-slate-900; }
+  .stat-label { @apply text-xs font-semibold uppercase tracking-widest text-slate-400 mt-1; }
+}

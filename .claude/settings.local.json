@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"yes\" | npm create vite@latest . -- --template react 2>&1)",
+      "Bash(node -e \"\nconst fs = require\\('fs'\\);\nconst pkg = JSON.parse\\(fs.readFileSync\\('C:/Users/aamir/Herd/mortgagecalculator/package.json', 'utf8'\\)\\);\nconst deps = {...pkg.dependencies, ...pkg.devDependencies};\nconst required = ['react', 'react-dom', 'recharts', '@tailwindcss/vite', '@vitejs/plugin-react', 'vite', 'tailwindcss'];\nrequired.forEach\\(d => {\n  console.log\\(d + ': ' + \\(deps[d] ? deps[d] + ' OK' : 'MISSING'\\)\\);\n}\\);\n\" 2>&1)",
+      "Bash(find /c/Users/aamir/Herd/mortgagecalculator -type f -name \"*.jsx\" -o -name \"*.js\" -o -name \"*.json\" | grep -E \"\\(package\\\\.json|\\\\.jsx|\\\\.js\\)$\" | head -30)",
+      "Bash(ls -1 C:/Users/aamir/Herd/mortgagecalculator/src/components/ | grep -E \"\\\\.\\(jsx|tsx\\)$\")"
+    ]
+  }
+}
