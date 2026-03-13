@@ -36,18 +36,18 @@ export default function App() {
             </div>
 
             {/* Panel 2 — 70%: sticky, full-height, flex column */}
-            <div className="lg:sticky lg:top-6 flex flex-col gap-4" style={{ height: 'calc(100vh - 5rem)' }}>
+            <div className="lg:sticky lg:top-6 flex flex-col gap-4 lg:h-[calc(100vh-5rem)]">
               {/* Top section: donut chart + balance chart side by side */}
               <div className="shrink-0 flex flex-col lg:flex-row gap-4">
                 <div className="w-full lg:w-[42%]">
                   <PaymentDonutChart results={resultsA} />
                 </div>
-                <div className="flex-1">
+                <div className="h-56 lg:h-auto lg:flex-1">
                   <BalanceChart results={resultsA} scenario={scenarioA} />
                 </div>
               </div>
               {/* Bottom section: payment schedule fills remaining height */}
-              <div className="flex-1 min-h-0">
+              <div className="h-[500px] lg:flex-1 lg:min-h-0">
                 <PaymentSchedulePanel results={resultsA} scenario={scenarioA} />
               </div>
             </div>
