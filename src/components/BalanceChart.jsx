@@ -44,9 +44,16 @@ export default function BalanceChart({ results, scenario }) {
 
   return (
     <div className="card flex flex-col h-full">
-      <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-4">
-        Balance Over Time
-      </h3>
+      <div className="flex items-baseline gap-2 mb-4">
+        <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-widest">
+          Balance Over Time
+        </h3>
+        {extraPayment > 0 && (
+          <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full whitespace-nowrap">
+            +{formatCurrency(extraPayment)}/mo extra
+          </span>
+        )}
+      </div>
       <div className="flex-1 min-h-0">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
