@@ -1,0 +1,16 @@
+{
+  "name": "Mortgage Calculator",
+  "short_name": "MortgageCalc",
+  "description": "Free mortgage calculator — calculate monthly payments, total interest, amortization schedule and compare loan scenarios instantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/infocard.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
