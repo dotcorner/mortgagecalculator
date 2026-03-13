@@ -38,8 +38,8 @@ export default function App() {
             {/* Panel 2 — 70%: sticky, full-height, flex column */}
             <div className="lg:sticky lg:top-6 flex flex-col gap-4" style={{ height: 'calc(100vh - 5rem)' }}>
               {/* Top section: donut chart + balance chart side by side */}
-              <div className="shrink-0 flex gap-4">
-                <div className="w-[42%]">
+              <div className="shrink-0 flex flex-col lg:flex-row gap-4">
+                <div className="w-full lg:w-[42%]">
                   <PaymentDonutChart results={resultsA} />
                 </div>
                 <div className="flex-1">
